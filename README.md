@@ -1,0 +1,1 @@
+![Tienda TIGRE](./src/assets/preentrega2-readme.gif)
