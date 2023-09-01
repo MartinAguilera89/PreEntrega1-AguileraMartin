@@ -1,37 +1,37 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import {Card, CardHeader, CardBody, CardFooter, Heading, Text, Image, Center} from '@chakra-ui/react'
+import { Card, CardHeader, CardBody, CardFooter, Heading, Text, Image, Center } from '@chakra-ui/react'
 import ItemCount from './ItemCount'
 
+const ItemDetail = ({ productos }) => {
 
-const ItemDetail = ({productos}) => {
-    const {id} = useParams();
-    const itemId = parseInt(id);
+    const { id } = useParams();
 
-    const filteredProductos = productos.filter((producto) => producto.id === itemId)  
+    const filterProducts = productos.filter((producto) => producto.id == id)
 
     return (
         <div>
-            {filteredProductos.map((p) => ( 
-                    <div  key={p.id}>
-                        <Center p='1rem'>
-                          <Card>
+            {filterProducts.map((p) => {
+                return (
+                <div key={p.id}>
+                    <Center p='1rem'>
+                        <Card className='card'>
                             <CardHeader>
-                             <Heading size='md'>{p.nombre}</Heading>
+                                <Heading size='xl'>{p.nombre}</Heading>
                             </CardHeader>
                             <CardBody>
-                                <Image src={p.image}/>
+                                <Image src={p.image} />
                                 <Text>{p.description}</Text>
                                 <Text>${p.price}</Text>
+                                <Text>stock {p.stock}</Text>
                             </CardBody>
                             <CardFooter>
-                                <ItemCount />
+                                <ItemCount producto={p} />
                             </CardFooter>
-                            </Card>
-                            </Center>
-                    </div>
-                )
-            )}
+                        </Card>
+                    </Center>
+                </div>)
+            })}
         </div>
     )
 }

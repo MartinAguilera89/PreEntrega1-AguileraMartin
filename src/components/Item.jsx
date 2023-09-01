@@ -1,8 +1,8 @@
 import React from 'react'
-import {Card, CardHeader, CardBody, CardFooter, Heading, Text, Button, Image, Stack, ButtonGroup, Divider, Flex, Box} from '@chakra-ui/react'
+import {Card, CardBody, CardFooter, Heading, Text, Button, Image, Stack, ButtonGroup, Divider, Flex, Box} from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
 
-const Item = ({ nombre, description, itemId, price, image}) => {
+const Item = ({ nombre, description, stock, itemId, price, image}) => {
   return (
   <Flex>
     <Box p='4'>
@@ -16,6 +16,9 @@ const Item = ({ nombre, description, itemId, price, image}) => {
         </Text>
         <Text color='blue.600' fontSize='2xl'>
           ${price}
+        </Text>
+        <Text fontSize='2xl'>
+          stock {stock}
         </Text>
       </Stack>
     </CardBody>

@@ -10,12 +10,13 @@ const ItemList = ({productos}) => {
   return (
     <div className="container">
       {productos.map((p) =>  (
-          <Item
+          <Item className='card'
           key={p.id} 
           itemId={p.id} 
           nombre={p.nombre} 
           price={p.price} 
           image={p.image}
+          stock={p.stock}
           />
           ))
       }

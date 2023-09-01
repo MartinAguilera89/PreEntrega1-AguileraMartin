@@ -8,66 +8,227 @@
     
 }
 
+.tienda{
+  padding: 0 30px;
+  margin-bottom: 50px;
+  box-shadow: 3px 3px 10px 5px #0e12e8;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+ 
+.menuLink{
+    width: 100%;
+    padding: 0 20px;
+    font-size: 1.3rem;
+    color: white;
+    background-color: red;
+    font-style: italic;
+    font-weight: bold;
+ 
+}
+
+.menuLink:hover {
+  background-color: whitesmoke;
+  color: hsl(356, 100%, 39%);
+  opacity: 0.8;
+  font-size: 1.3rem;
+  font-style: italic;
+}
+
+.row-cols-4 {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.container{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  font: bold;
+  font-size: 3rem;
+  font-style: italic;
+}
+
 .saludo{
     color: #0e12e8;
-    font: bold;
-    font-size: 2rem;
+    font-weight: bold;
+    font-size: 3.5rem;
     font-style: italic;
     display: flex;
     justify-content: center;
 }
 
 .cart{
+    margin: 50px;
     color: #0e12e8;
-    font: bold;
-    font-size: 2rem;
+    font-weight: bold;
+    font-size: 1.5rem;
     font-style: italic;
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
 
+.card{
+
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: 3px solid #0e12e8;
 }
 
 .categorias{
     color:white;
     padding: 10px;
+    font-weight: bold;
 }
 
 .boton{
     border-radius: 5px;
-    padding: 5px;
-    font: bold;
+    padding: 0 20px;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 1.3rem
 }
+
+.boton:hover {
+  background-color: whitesmoke;
+  color: hsl(356, 100%, 39%);
+  opacity: 0.8;
+  font-size: 1.3rem;
+  font-style: italic;
+}
+
+
+.compra {
+  width: 20%;
+  box-shadow: 3px 3px 10px 5px #0e12e8;
+  color: #0e12e8;
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 10px;
+  text-align: center;
+}
+
+
+.compra button {
+  background-color:#0e12e8;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10%;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.categorias{
+  font-size: 1.5rem;
+  color: white;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.borrar{
+  background-color:red;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+
 
 /*  ItemCount */
 .item-count-card {
-    width: 200px;
+    width: 350px;
+    height:100px;
     padding: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid #0e12e8;
     border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    color:red;
+    font: bold;
+    font-size: 2rem;
+    font-style: italic;
   }
   
   .item-count-buttons {
     display: flex;
     flex-direction: column;
     align-items: center;
+    border: 1px solid #0e12e8;
+    
   }
   
   .item-count-number {
-    font-size: 24px;
+    font-size: 30px;
     font-weight: bold;
   }
   
   .item-count-button {
-    background-color: #007bff;
+    background-color: #0e12e8;
     color: white;
     border: none;
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    font-size: 20px;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease;
+  }
+
+  .item-count-cart {
+    background-color: #0e12e8;
+    color: white;
+    border: none;
+    border-radius: 5%;
+    width: 100px;
+    height: 70px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: row;
+    flex-grow: center;
+    
+  }
+
+
+  .check{
+    max-width: 400px;
+    margin: 0 auto 10px;
+    padding: 20px;
+    border: 2px solid #0e12e8;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+  }
+
+  .fin{
+    background-color: #0e12e8;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 5px;
+    font-weight: bold;
+
+  }
+
+  .orden{
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 50px;
+    text-align: center;
+
   }
